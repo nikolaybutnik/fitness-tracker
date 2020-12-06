@@ -10,15 +10,12 @@ app.use(express.json())
 app.use(express.static('public'))
 
 // mongoose connection
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/??????????????',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-  }
-)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+})
 
 // routes
 app.use(require('./controllers/api-routes'))

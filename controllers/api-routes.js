@@ -1,9 +1,18 @@
-const db = require('../models')
 const express = require('express')
 const router = express.Router()
 
+const Workout = require('../models/workout-model')
+
 router.get('/', function (req, res) {
-  res.send('Hello World')
+  res.sendFile('index.html')
+})
+
+router.get('/api/workouts', function (req, res) {
+  res.json()
+})
+
+router.get('/api/workouts/range', function (req, res) {
+  res.json()
 })
 
 // Export the router.
