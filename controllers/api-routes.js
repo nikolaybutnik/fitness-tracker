@@ -33,7 +33,6 @@ router.put('/api/workouts/:id', async function (req, res) {
     { _id: id },
     { $set: { exercises: req.body } }
   )
-  // console.log(workoutToUpdate)
   const updatedWorkout = await Workout.findOne({ _id: id })
   try {
     res.status(200).json(updatedWorkout)
