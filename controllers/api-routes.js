@@ -51,8 +51,16 @@ router.put('/api/workouts/:id', async function (req, res) {
   }
 })
 
-router.get('/api/workouts/range', function (req, res) {
-  res.json()
+router.get('/api/workouts/range', async function (req, res) {
+  const workouts = await Workout.find({}).sort({ day: -1 }).limit(7)
+  const workoutsReversed = await workouts.reverse()
+  // console.log(workouts)
+  // console.log(workoutsReversed)
+  try {
+    res.status(200).json(workoutsReversed)
+  } catch (err) {
+    res.status(500).json(err)
+  }
 })
 
 // Export the router.
