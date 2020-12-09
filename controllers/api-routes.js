@@ -20,8 +20,8 @@ router.post('/api/workouts', async function (req, res) {
   try {
     const newWorkout = await new Workout()
     const existingWorkout = await Workout.findOne({ day: newWorkout.day })
-    console.log(newWorkout)
-    console.log(existingWorkout)
+    // console.log(newWorkout)
+    // console.log(existingWorkout)
     // Check database to see if workout already exists for current day. If not, create the new workout.
     if (!existingWorkout) {
       newWorkout.save()
