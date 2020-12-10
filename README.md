@@ -8,7 +8,7 @@ A web application that allows the user to track their workouts and provides visu
 
 [Link to application](https://afternoon-oasis-31654.herokuapp.com/)
 
-![Fitness Tracker Screenshot](https://github.com/nikolaybutnik/burger/blob/main/public/assets/img/fitness-tracker-screenshot.png?raw=true)
+![Fitness Tracker Screenshot](https://github.com/nikolaybutnik/fitness-tracker/blob/main/public/assets/img/fitness-tracker-screenshot.png?raw=true)
 
 ## Table of Contents
 
