@@ -39,6 +39,8 @@ router.put('/api/workouts/:id', async function (req, res) {
   }
 })
 
+// A route that finds the last 7 days in the database and sends the data to browser.
+// The browswer uses the data to output charts.
 router.get('/api/workouts/range', async function (req, res) {
   const workouts = await Workout.find({}).sort({ day: -1 }).limit(7)
   const workoutsReversed = await workouts.reverse()
